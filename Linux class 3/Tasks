@@ -1,0 +1,19 @@
+Task 1: Copy all files from FolderOne to FolderTwo
+Question: Assume there are two folders, FolderOne and FolderTwo. FolderOne contains three files: Python, Java, and DevOps.
+How do you copy all the files inside FolderOne into FolderTwo?
+
+Task 2: Copy files and folders recursively
+Question: Assume FolderOne contains some files and subfolders. How do you copy everything inside FolderOne, 
+including all files and folders, into FolderTwo?
+
+Task 3: Copy only selected files
+Question: Assume FolderOne contains three files:
+- File1
+- File2
+- File3
+Your requirement is to copy only File2 and File3 from FolderOne into FolderTwo.
+How do you perform this operation?
+
+Question 4: Copy data from one file to multiple files
+You have multiple files, but only File1 contains data. The remaining files are empty.
+How do you copy the data from File1 into all the other files?
