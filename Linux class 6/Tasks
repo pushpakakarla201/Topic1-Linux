@@ -1,0 +1,86 @@
+6. Linux Permissions
+No.	Scenario-based interview task	Expected command
+51	Check the permissions of files.	ls -l
+52	Give read, write and execute permissions to everyone.	chmod 777 file1
+53	Give read and write permissions to the owner only.	chmod 600 file1
+54	Give execute permission to a script.	chmod +x script.sh
+55	Change permissions recursively for a directory.	chmod -R 755 DevOps/
+56	Change file ownership to john.	sudo chown john file1
+57	Change group ownership to developers.	sudo chgrp developers file1
+58	Give the owner full permissions and others read-only permissions.	chmod 744 file1
+
+7. Process Management
+No.	Scenario-based interview task	Expected command
+59	Check all running processes.	ps -ef
+60	Find whether the Jenkins process is running.	ps -ef \| grep jenkins
+61	Check CPU and memory usage in real time.	top
+62	Find the process ID of an application.	pgrep -a nginx
+63	Stop a process using its PID.	kill PID
+64	Forcefully terminate a process.	kill -9 PID
+65	Check how many processes are running.	ps -ef \| wc -l
+66	Find processes consuming high CPU.	top
+67	Check whether a service is running.	systemctl status nginx
+68	Restart the Nginx service.	sudo systemctl restart nginx
+
+8. Disk and Memory Management
+No.	Scenario-based interview task	Expected command
+69	Check available disk space.	df -h
+70	Identify the size of a particular directory.	du -sh directory/
+71	Find the largest files in a directory.	du -ah directory/ \| sort -rh \| head -10
+72	Check RAM utilization.	free -h
+73	Check disk partitions.	fdisk -l
+74	Display block devices.	lsblk
+75	Find the size of a particular file.	du -h file1
+76	Check system CPU information.	lscpu
+77	Check memory details.	cat /proc/meminfo
+
+9. Networking Commands
+No.	Scenario-based interview task	Expected command
+78	Find the server's IP address.	ip addr
+79	Check private IP addresses.	hostname -I
+80	Test connectivity to Google.	ping -c 4 google.com
+81	Check whether port 80 is listening.	sudo ss -tulnp \| grep ':80'
+82	Check the connectivity of a website.	curl -I https://example.com
+83	Find the IP address of a domain.	nslookup google.com
+84	Download a file from the internet.	wget URL
+85	Check network interfaces.	ip link
+86	Check active network connections.	ss -tunap
+
+10. Searching and Filtering
+No.	Scenario-based interview task	Expected command
+87	Search for a particular file by name.	find / -name "file1" 2>/dev/null
+88	Search for all .log files.	find /var/log -name "*.log"
+89	Search for the word failed in a file.	grep "failed" file.log
+90	Search for a word without case sensitivity.	grep -i "error" file.log
+91	Count how many times ERROR appears in a file.	grep -c "ERROR" file.log
+92	Display matching lines with line numbers.	grep -n "ERROR" file.log
+93	Search for a word in all files in a directory.	grep -r "ERROR" directory/
+94	Find empty files.	find . -type f -empty
+
+11. Archive and Compression
+No.	Scenario-based interview task	Expected command
+95	Create a ZIP archive of a directory.	zip -r backup.zip DevOps/
+96	Extract a ZIP file.	unzip backup.zip
+97	Create a tar archive.	tar -cvf backup.tar DevOps/
+98	Extract a tar archive.	tar -xvf backup.tar
+99	Create a compressed tar.gz archive.	tar -czvf backup.tar.gz DevOps/
+100	Extract a tar.gz archive.	tar -xzvf backup.tar.gz
+
+12. Real-Time DevOps Troubleshooting Scenarios
+These are particularly important for Linux and DevOps interviews.
+No.	Interview scenario	What should you investigate?
+101	Your Linux server is running very slowly. How will you troubleshoot it?	top, free -h, df -h, uptime
+102	Your application is not responding. How will you identify the issue?	systemctl status, ps, curl, ss
+103	Your disk is 100% full. How will you find the files consuming space?	df -h, du -ah
+104	Jenkins is not starting. How will you troubleshoot it?	systemctl status jenkins, journalctl -u jenkins
+105	A website is not opening in the browser. What will you check?	curl -I, ping, ss, Nginx logs
+106	You forgot which user you are logged in as. What command will you use?	whoami
+107	A developer cannot execute a shell script. How will you fix it?	ls -l, chmod +x script.sh
+108	A user cannot access a file. How will you troubleshoot permissions?	ls -l, id, groups, chmod, chown
+109	Your application suddenly stopped working. How will you check its logs?	tail -f application.log
+110	You need to identify which application is using port 8080.	sudo ss -tulnp \| grep ':8080'
+111	You need to check why a service failed.	journalctl -u service-name
+112	Your server cannot connect to the internet. What will you check?	ip addr, ip route, ping, curl
+113	You need to find recently modified files.	find . -type f -mtime -1
+114	Your server has too many old log files. How will you identify files older than 7 days?	find /var/log -type f -mtime +7
+115	You need to schedule a script to run every day at midnight.	crontab -e
