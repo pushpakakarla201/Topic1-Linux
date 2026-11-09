@@ -1,0 +1,13 @@
+2. File and Directory Management
+No.	Scenario-based interview task	Expected command
+
+11	Create a directory called DevOps.	mkdir DevOps
+12	Create 10 empty files named file1 to file10.	touch file{1..10}
+13	Create multiple directories in one command.	mkdir DevOps AWS Linux
+14	You need to create a directory and its parent directories if they do not exist.	mkdir -p A/B/C
+15	Find all files in the current directory.	find . -type f
+16	Find all directories in the current location.	find . -type d
+17	Delete an empty directory.	rmdir directory_name
+18	Delete a directory containing files and subdirectories.	rm -r directory_name
+19	Create a hidden file named .env.	touch .env
+20	List files in reverse order.	ls -lr
