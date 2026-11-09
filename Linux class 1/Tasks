@@ -1,0 +1,12 @@
+Scenario-based interview task	Expected command
+
+1	You logged into a Linux server. How do you check your current location?	pwd
+2	You want to check all files, including hidden files.	ls -la
+3	Your manager asks you to identify the Linux OS version.	cat /etc/os-release
+4	You need to check the Linux kernel version.	uname -r
+5	You want to know how long the server has been running.	uptime
+6	You need to check the current logged-in user.	whoami
+7	You want to check all users currently logged into the server.	who
+8	You need to switch to the root user.	sudo -i
+9	You want to return from root to the normal user.	exit
+10	You need to check the server hostname.	hostname
