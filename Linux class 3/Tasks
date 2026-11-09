@@ -1,0 +1,13 @@
+3. Copying, Moving and Deleting Files
+No.	Scenario-based interview task	Expected command
+
+21	Copy file1 into file2.	cp file1 file2
+22	Copy multiple files into a directory called Backup.	cp file1 file2 Backup/
+23	Copy all files from Folder1 to Folder2.	cp Folder1/* Folder2/
+24	Copy a complete directory with its contents.	cp -r Folder1 Folder2/
+25	Move a file from one directory to another.	mv file1 DevOps/
+26	Rename old.txt to new.txt.	mv old.txt new.txt
+27	Delete all .log files in the current directory.	rm -f *.log
+28	Delete files starting with the letter D.	rm -f D*
+29	Copy data from one file to multiple files without overwriting existing content.	tee -a file2 file3
+30	Create a backup copy of a file.	cp file1 file1.bak
