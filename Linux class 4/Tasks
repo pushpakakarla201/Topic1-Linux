@@ -1,0 +1,13 @@
+4. File Content Management
+No.	Scenario-based interview task	Expected command
+
+31	Read the contents of a file.	cat file1
+32	Display file contents with line numbers.	cat -n file1
+33	Add new content without deleting existing content.	cat >> file1
+34	Display the first 10 lines of a log file.	head file.log
+35	Display the last 10 lines of a log file.	tail file.log
+36	Monitor a log file continuously.	tail -f application.log
+37	Display lines 5 to 15 from a file.	sed -n '5,15p' file1
+38	Count the number of lines in a file.	wc -l file1
+39	Count words in a file.	wc -w file1
+40	Search for the word ERROR inside a log file.	grep 'ERROR' file.log
