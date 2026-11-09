@@ -1,0 +1,13 @@
+5. Linux Users and Groups
+No.	Scenario-based interview task	Expected command
+
+41	Create a new user named john.	sudo useradd john
+42	Set a password for john.	sudo passwd john
+43	Check whether the user exists.	id john
+44	Display all users configured on the server.	cat /etc/passwd
+45	Delete a user named john.	sudo userdel john
+46	Create a group called developers.	sudo groupadd developers
+47	Add john to the developers group.	sudo usermod -aG developers john
+48	Check all groups of a particular user.	groups john
+49	Display group information.	cat /etc/group
+50	Delete a group named developers.	sudo groupdel developers
